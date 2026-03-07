@@ -28,7 +28,7 @@ export function Footer() {
 
             <div className="pt-2">
               <a
-                href="mailto:hello@ehsanghaffar.dev"
+                href="mailto:hello@mafia.dev"
                 className="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-xl border border-primary bg-primary/10 px-8 py-4 sm:py-4 font-mono text-sm text-primary transition-all duration-500 hover:text-primary-foreground active:scale-[0.98] w-full sm:w-auto"
               >
                 <span className="relative z-10">send a signal</span>
