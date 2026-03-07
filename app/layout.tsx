@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   description:
     "A digital workshop where code meets curiosity. Experiments, prototypes, and open-source artifacts by Mафия CODE.",
   keywords: ["Software Engineering", "Web Development", "Next.js", "React", "TypeScript", "AI", "Machine Learning", "Systems Programming", "Code Experiments"],
-  authors: [{ name: "Mафия CODE", url: "https://github.com/ehsanghaffar" }],
+  authors: [{ name: "Mафия CODE", url: "https://github.com/Zelesen" }],
   creator: "Mафия CODE",
   publisher: "Mафия CODE",
   generator: "v0.app",
@@ -55,8 +55,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Mафия CODE — Mафия CODE's Digital Laboratory",
     description: "A digital workshop where code meets curiosity. Experiments, prototypes, and open-source artifacts.",
-    creator: "@ehsanghaffar",
-    images: ["/og-image.png"],
+    creator: "@Zelesen",
+    images: ["/developer-portrait.png"],
   },
   robots: {
     index: true,
