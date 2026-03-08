@@ -5,6 +5,7 @@ import { LabNotes } from "@/components/lab-notes"
 import { Workbench } from "@/components/workbench"
 import { Footer } from "@/components/footer"
 import { CursorGlow } from "@/components/cursor-glow"
+import { ScrollAnimations } from "@/components/scroll-animations"
 import { generateWebsiteStructuredData, generatePersonStructuredData } from "@/lib/structured-data"
 
 export default function Home() {
@@ -24,6 +25,7 @@ export default function Home() {
       />
       <main className="relative min-h-screen overflow-hidden scanlines">
         <CursorGlow />
+        <ScrollAnimations />
         <div className="relative z-10">
           <Header />
           <HeroSection />
