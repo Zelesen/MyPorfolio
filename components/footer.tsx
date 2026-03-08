@@ -95,7 +95,7 @@ export function Footer() {
                                 fill="none"
                                 stroke="currentColor"
                                 strokeWidth="1.8"
-                                className="h-7 w-7 text-primary group-hover:text-primary-foreground"
+                                className="h-7 w-7 text-primary group-hover:text-white transition-colors duration-300"
                               >
                                 <circle cx="12" cy="12" r="6" />
                                 <line x1="12" y1="2" x2="12" y2="22" />
