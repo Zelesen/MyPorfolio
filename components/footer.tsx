@@ -1,4 +1,5 @@
 import { Github, Twitter, Linkedin, Mail, ExternalLink, Heart } from "lucide-react"
+import Link from "next/link"
 
 const socialLinks = [
   { label: "GitHub", href: "https://github.com/Zelesen", handle: "@Zelesen", icon: Github },
@@ -82,8 +83,10 @@ export function Footer() {
                     <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-6 gap-8 md:gap-12">
                         
                         <div className="lg:col-span-3 space-y-6">
+                           <Link href="/" className="group flex items-center gap-0">
+                    
                             {/* Icon */}
-                            <div className="relative flex h-9 w-9 items-center justify-center rounded-lg border border-primary/50 bg-primary/10 transition-all duration-400 group-hover:border-primary group-hover:bg-primary group-hover:scale-105 group-hover:shadow-lg group-hover:shadow-primary/25">
+                            <div className="relative flex h-9 w-9 items-center justify-center rounded-lg   transition-all duration-400 group-hover:scale-105 group-hover:shadow-lg ">
                               
                               {/* Mafia M Logo */}
                               <svg
@@ -92,13 +95,23 @@ export function Footer() {
                                 fill="none"
                                 stroke="currentColor"
                                 strokeWidth="1.8"
-                                className="h-4 w-4 text-primary group-hover:text-primary-foreground"
+                                className="h-7 w-7 text-primary group-hover:text-primary-foreground"
                               >
                                 <circle cx="12" cy="12" r="6" />
                                 <line x1="12" y1="2" x2="12" y2="22" />
                               </svg>
 
                             </div>
+
+                            {/* Text */}
+                            <span className="font-mono text-sm tracking-tight flex items-center gap-1">
+                              Mафия
+                              <span className="bg-linear-to-l from-primary/50 to-accent bg-clip-text text-transparent font-semibold ml-1">
+                                CODE
+                              </span>
+                            </span>
+
+                          </Link>
                             <p className="text-sm/6 text-neutral-300 max-w-96">I'm a full-stack developer with a passion for crafting exceptional digital experiences.</p>
                             <div className="flex gap-5 md:gap-6 order-1 md:order-2">
                                 {/* X (Twitter) */}
