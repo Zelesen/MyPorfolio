@@ -2,120 +2,119 @@
 
 import { useState, useEffect, useRef } from "react"
 import { cn } from "@/lib/utils"
-import { Github, Star, GitFork, ExternalLink, Sparkles, Search, Filter } from "lucide-react"
+import { Github, Star, GitFork, ExternalLink, Sparkles, Search, Filter, Command } from "lucide-react"
 import { Input } from "@/components/ui/input"
 
 const projects = [
   {
     id: 0,
-    title: "Mафия UI",
+    title: "Ad Intelligence",
     description:
-      "A collection of modern glass-style UI components that developers can preview, copy, and integrate into web apps. Built with Tailwind, shadcn/ui, and Radix primitives.",
-    tags: ["TypeScript", "Next.js 16", "shadcn", "Radix UI", "Tailwind"],
+      "An AI-powered platform that analyzes ad creatives, messaging, and targeting patterns to help marketers discover high-performing advertising strategies.",
+    tags: ["TypeScript", "Next.js", "OpenAI", "Analytics", "Tailwind"],
     status: "in-progress",
-    year: "2025",
-    stars: 8,
-    forks: 1,
-    url: "https://github.com/Zelesen/mafia-ui",
-    homepage: "https://ui.mafia-dev.com",
+    year: "2026",
+    stars: 21,
+    forks: 3,
+    url: "https://github.com/yourusername/mafia-ad-intelligence",
+    homepage: "https://mafia-ads.vercel.app",
     featured: true,
     highlight: true,
   },
   {
     id: 1,
-    title: "Mафия Bio AI",
+    title: "Copy Analyzer",
     description:
-      "An AI-powered web application that generates engaging social media bios using OpenAI models and modern frontend technologies.",
-    tags: ["TypeScript", "Next.js", "GPT", "LangChain"],
+      "An AI tool that evaluates advertising copy and marketing content for clarity, persuasion, and emotional impact using large language models.",
+    tags: ["TypeScript", "Next.js", "GPT", "AI Analysis"],
     status: "shipped",
-    year: "2023",
-    stars: 17,
-    forks: 8,
-    url: "https://github.com/Zelesen/mafia-bio-ai",
-    homepage: "https://bio.mafia-dev.com",
+    year: "2025",
+    stars: 18,
+    forks: 4,
+    url: "https://github.com/yourusername/mafia-copy-analyzer",
+    homepage: "https://copy.mafia-ai.com",
     featured: true,
   },
   {
     id: 2,
-    title: "Mафия JavaScript Lab",
+    title: "Ad Library",
     description:
-      "A curated collection of JavaScript algorithms, code snippets, and small projects used for experimentation and learning.",
-    tags: ["JavaScript", "Algorithms", "Snippets"],
+      "A searchable ad intelligence platform inspired by the Facebook Ad Library that collects, categorizes, and analyzes advertising creatives.",
+    tags: ["JavaScript", "Django", "Scraping", "Marketing"],
     status: "shipped",
-    year: "2020",
-    stars: 19,
-    forks: 5,
-    url: "https://github.com/Zelesen/mafia-js-lab",
-    featured: false,
+    year: "2025",
+    stars: 26,
+    forks: 6,
+    url: "https://github.com/yourusername/mafia-ad-library",
+    featured: true,
   },
   {
     id: 3,
-    title: "Mафия Next.js Docker Starter",
+    title: "Brand Monitor",
     description:
-      "A production-ready starter template for building Next.js 16 applications with Docker, PNPM, Tailwind v4, and NextAuth authentication.",
-    tags: ["Next.js 16.1.0", "Docker", "Tailwind v4"],
+      "A dashboard that tracks brand citations, prompt categories, and AI-generated insights to measure how brands appear across AI platforms.",
+    tags: ["Next.js", "PostgreSQL", "OpenAI", "Analytics"],
     status: "in-progress",
-    year: "2025",
-    stars: 8,
-    forks: 4,
-    url: "https://github.com/Zelesen/mafia-next-docker",
-    homepage: "https://next-docker.mafia-dev.com",
+    year: "2026",
+    stars: 12,
+    forks: 2,
+    url: "https://github.com/yourusername/mafia-brand-monitor",
+    homepage: "https://brand.mafia-ai.com",
     featured: true,
   },
   {
     id: 4,
-    title: "Mафия Social Resources",
+    title: "Video Analyzer",
     description:
-      "A curated collection of resources related to voice-based social platforms and online communities.",
-    tags: ["Python", "Awesome List", "Social"],
-    status: "archived",
-    year: "2022",
-    stars: 41,
-    forks: 8,
-    url: "https://github.com/Zelesen/mafia-social-resources",
-    homepage: "https://zelesen.github.io/mafia-social-resources",
+      "An AI system that extracts frames from video ads and analyzes visuals, branding, and messaging for creative performance insights.",
+    tags: ["Python", "OpenCV", "AI", "Video Analysis"],
+    status: "in-progress",
+    year: "2025",
+    stars: 14,
+    forks: 2,
+    url: "https://github.com/yourusername/mafia-video-analyzer",
     featured: false,
   },
   {
     id: 5,
-    title: "Mафия LLM Lab",
+    title: "Mафия Prompt Lab",
     description:
-      "A self-hosted chatbot API built with FastAPI that allows interaction with open-source LLMs such as Llama for natural language tasks.",
-    tags: ["Python", "FastAPI", "Llama2", "MCP"],
+      "A toolkit for testing, organizing, and optimizing prompts used in AI-powered marketing and automation workflows.",
+    tags: ["Python", "FastAPI", "LLM", "Prompt Engineering"],
     status: "shipped",
-    year: "2023",
-    stars: 13,
+    year: "2024",
+    stars: 11,
     forks: 3,
-    url: "https://github.com/Zelesen/mafia-llm-lab",
+    url: "https://github.com/yourusername/mafia-prompt-lab",
     featured: false,
   },
   {
     id: 6,
-    title: "Mафия Linux Build",
+    title: "Mафия Growth Tools",
     description:
-      "A minimal Linux distribution built from scratch using the Linux kernel, BusyBox utilities, and the Syslinux bootloader.",
-    tags: ["Shell", "Linux", "Docker"],
+      "A collection of AI-driven marketing utilities including headline generators, ad scoring tools, and campaign optimization features.",
+    tags: ["TypeScript", "Next.js", "AI", "Marketing"],
     status: "in-progress",
-    year: "2025",
-    stars: 8,
-    forks: 1,
-    url: "https://github.com/Zelesen/mafia-linux-build",
+    year: "2026",
+    stars: 16,
+    forks: 3,
+    url: "https://github.com/yourusername/mafia-growth-tools",
     featured: true,
   },
   {
     id: 7,
-    title: "Mафия Next.js App Template",
+    title: "Dev Stack",
     description:
-      "A full-stack Next.js starter template featuring Docker, MongoDB integration, authentication, and Tailwind CSS.",
-    tags: ["TypeScript", "Next.js", "Docker", "MongoDB"],
+      "A developer starter kit with Next.js, Docker, PostgreSQL, and Tailwind designed for quickly launching scalable SaaS applications.",
+    tags: ["TypeScript", "Next.js", "Docker", "PostgreSQL"],
     status: "shipped",
-    year: "2023",
-    stars: 19,
-    forks: 6,
-    url: "https://github.com/Zelesen/mafia-next-template",
+    year: "2024",
+    stars: 22,
+    forks: 7,
+    url: "https://github.com/yourusername/mafia-dev-stack",
     featured: false,
   },
-]
+];
 
 const filters = ["all", "shipped", "in-progress", "archived"]
 const allTags = [...new Set(projects.flatMap((p) => p.tags))]
@@ -127,6 +126,19 @@ export function ProjectsPageContent() {
   const [hoveredProject, setHoveredProject] = useState<number | null>(null)
   const [isVisible, setIsVisible] = useState(false)
   const sectionRef = useRef<HTMLElement>(null)
+
+
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
+
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect()
+    setMousePos({
+      x: e.clientX - rect.left,
+      y: e.clientY - rect.top,
+    })
+  }
 
   useEffect(() => {
     setIsVisible(true)
@@ -149,15 +161,16 @@ export function ProjectsPageContent() {
   return (
     <section ref={sectionRef} className="px-4 sm:px-6 py-12 sm:py-20">
       <div className="mx-auto max-w-7xl">
-        {/* Hero */}
-        <div className={cn("mb-12 sm:mb-16 space-y-4 opacity-0", isVisible && "animate-fade-in-up")}>
-          <p className="font-mono text-xs uppercase tracking-[0.25em] sm:tracking-[0.35em] text-primary">Artifacts</p>
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">Open Source Projects</h1>
-          <p className="max-w-2xl text-base sm:text-lg text-muted-foreground leading-relaxed">
-            A collection of tools, experiments, and contributions to the open source community. Built with passion,
-            maintained with care.
-          </p>
-        </div>
+        {/* Header Section */}
+        <div className="space-y-4 animate-fade-in mb-5">
+            <div className="flex items-center gap-3 text-primary/70">
+              <Command className="h-4 w-4" />
+              <p className="font-mono text-[10px] uppercase tracking-[0.4em]">system.exec("--list-artifacts")</p>
+            </div>
+            <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl lg:text-6xl italic text-white">
+              BUILD_LOG<span className="text-primary animate-pulse">.</span>
+            </h2>
+          </div>
 
         {/* Search and Filters */}
         <div className={cn("mb-10 space-y-6 opacity-0", isVisible && "animate-fade-in-up stagger-2")}>
@@ -175,20 +188,20 @@ export function ProjectsPageContent() {
 
           {/* Status Filters */}
           <div className="flex flex-wrap gap-2">
-            {filters.map((filter) => (
-              <button
-                key={filter}
-                onClick={() => setActiveFilter(filter)}
-                className={cn(
-                  "rounded-lg border px-4 py-2 font-mono text-xs uppercase tracking-wider transition-all duration-300 active:scale-[0.98]",
-                  activeFilter === filter
-                    ? "border-primary bg-primary/15 text-primary shadow-sm shadow-primary/20"
-                    : "border-border text-muted-foreground hover:border-foreground/50 hover:text-foreground hover:bg-secondary/50",
-                )}
-              >
-                {filter}
-              </button>
-            ))}
+           {filters.map((filter) => (
+                         <button
+                           key={filter}
+                           onClick={() => setActiveFilter(filter)}
+                           className={cn(
+                             "relative overflow-hidden rounded-sm px-4 py-1.5 text-[10px] uppercase tracking-widest transition-all",
+                             activeFilter === filter
+                               ? "text-primary bg-primary/10 border-b-2 border-primary"
+                               : "text-muted-foreground border-b border-white/10 hover:border-white/40 hover:text-white"
+                           )}
+                         >
+                           {filter === 'all' ? './root' : `--${filter}`}
+                         </button>
+                       ))}
           </div>
 
           {/* Tag Filters */}
@@ -211,123 +224,102 @@ export function ProjectsPageContent() {
           </div>
         </div>
 
-        {/* Projects Grid */}
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {/* Grid Section */}
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {filteredProjects.map((project, index) => (
             <article
               key={project.id}
+              onMouseMove={handleMouseMove}
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}
               className={cn(
-                "group relative overflow-hidden rounded-xl border bg-card/40 p-6 sm:p-7 glass transition-all duration-400 active:scale-[0.99] hover-lift opacity-0",
-                isVisible && "animate-fade-in-up",
-                hoveredProject === project.id && "border-primary/40 bg-card/70",
-                "highlight" in project && project.highlight
-                  ? "sm:col-span-2 lg:col-span-2 border-primary/30 bg-gradient-to-br from-primary/8 via-card/50 to-primary/8"
-                  : "border-border/60",
-                project.featured && !("highlight" in project && project.highlight) && "sm:col-span-2 lg:col-span-1",
+                "group relative flex flex-col overflow-hidden rounded-sm border border-white/[0.05] bg-[#070707] p-6 transition-all duration-500",
+                "hover:border-primary/40",
+                project.highlight && "sm:col-span-2 lg:col-span-2 bg-[#0a0a0a]"
               )}
-              style={{ animationDelay: `${(index % 6) * 80 + 200}ms` }}
-              onMouseEnter={() => setHoveredProject(project.id)}
-              onMouseLeave={() => setHoveredProject(null)}
             >
-              {"highlight" in project && project.highlight && (
-                <div className="absolute left-5 top-5 flex items-center gap-2 rounded-full border border-primary/40 bg-primary/15 px-3.5 py-1.5 animate-pulse-glow">
-                  <Sparkles className="h-3.5 w-3.5 text-primary" />
-                  <span className="font-mono text-[10px] uppercase tracking-wider text-primary font-medium">
-                    Featured
-                  </span>
+              {/* Corner Brackets Animation */}
+              <div className="absolute top-0 left-0 h-4 w-4 border-t-2 border-l-2 border-primary/0 transition-all duration-300 group-hover:border-primary/50 group-hover:h-3 group-hover:w-3" />
+              <div className="absolute bottom-0 right-0 h-4 w-4 border-b-2 border-r-2 border-primary/0 transition-all duration-300 group-hover:border-primary/50 group-hover:h-3 group-hover:w-3" />
+
+              {/* Matrix-like Background Texture on Hover */}
+              <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-[0.02] transition-opacity duration-700 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]" />
+
+              {/* Interactive Spotlight Glow */}
+              <div
+                className="pointer-events-none absolute -inset-px opacity-0 transition duration-500 group-hover:opacity-100"
+                style={{
+                  background: `radial-gradient(300px circle at ${mousePos.x}px ${mousePos.y}px, rgba(var(--primary-rgb), 0.15), transparent 80%)`,
+                }}
+              />
+
+              <div className="relative z-10 flex flex-col h-full">
+                {/* Header: ID & Status */}
+                <div className="flex items-center justify-between mb-8">
+                  <span className="font-mono text-[10px] text-white/20">ID_00{project.id}</span>
+                  <div className="flex items-center gap-2">
+                     <span className={cn(
+                        "h-1 w-1 rounded-full",
+                        project.status === "shipped" ? "bg-emerald-500 shadow-[0_0_8px_#10b981]" : "bg-primary shadow-[0_0_8px_rgba(var(--primary-rgb),1)] animate-pulse"
+                      )} />
+                    <span className="font-mono text-[9px] uppercase tracking-widest text-muted-foreground">
+                      {project.status}
+                    </span>
+                  </div>
                 </div>
-              )}
 
-              <div
-                className={cn(
-                  "absolute right-5 top-5 flex items-center gap-2.5",
-                  "highlight" in project && project.highlight && "top-5",
-                )}
-              >
-                <span
-                  className={cn(
-                    "h-2.5 w-2.5 rounded-full transition-shadow duration-300",
-                    project.status === "shipped" && "bg-primary shadow-sm shadow-primary/50",
-                    project.status === "in-progress" && "bg-yellow-500 animate-pulse shadow-sm shadow-yellow-500/50",
-                    project.status === "archived" && "bg-muted-foreground",
-                  )}
-                />
-                <span className="font-mono text-xs text-muted-foreground">{project.status}</span>
+                {/* Main Content */}
+                <div className="space-y-3 flex-grow">
+                  <div className="flex items-center gap-3">
+                    <h3 className="text-xl font-bold tracking-tight text-zinc-100 group-hover:text-primary transition-colors duration-300">
+                      {project.title.replace(" ", "_").toUpperCase()}
+                    </h3>
+                  </div>
+                  <p className="text-sm font-mono leading-relaxed text-zinc-500 group-hover:text-zinc-300 transition-colors duration-500">
+                    <span className="text-primary/40 mr-1">DESC::</span>
+                    {project.description}
+                  </p>
+                </div>
+
+                {/* Bottom Metadata Section */}
+                <div className="mt-8 pt-6 border-t border-white/[0.03] space-y-4">
+                  {/* Tags with a "Chip" aesthetic */}
+                  <div className="flex flex-wrap gap-2">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-2 py-0.5 rounded-sm bg-zinc-900 border border-zinc-800 font-mono text-[9px] text-zinc-500 group-hover:border-primary/20 group-hover:text-primary/60 transition-colors"
+                      >
+                        #{tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Git Stats & Link */}
+                  <div className="flex items-center justify-between pt-2">
+                    <div className="flex items-center gap-4">
+                      <div className="flex items-center gap-1.5 font-mono text-[10px] text-zinc-600 group-hover:text-yellow-500/60 transition-colors">
+                        <Star className="h-3 w-3" />
+                        {project.stars}
+                      </div>
+                      <div className="flex items-center gap-1.5 font-mono text-[10px] text-zinc-600 group-hover:text-zinc-300 transition-colors">
+                        <GitFork className="h-3 w-3" />
+                        {project.forks}
+                      </div>
+                    </div>
+                    
+                    <a 
+                      href={project.url} 
+                      className="p-2 rounded-full hover:bg-primary/10 text-zinc-600 hover:text-primary transition-all duration-300"
+                    >
+                      <ExternalLink className="h-4 w-4" />
+                    </a>
+                  </div>
+                </div>
               </div>
 
-              <div
-                className={cn(
-                  "mb-5 font-mono text-xs text-muted-foreground",
-                  "highlight" in project && project.highlight && "mt-10",
-                )}
-              >
-                {project.year}
-              </div>
-
-              <h3
-                className={cn(
-                  "mb-3 font-bold tracking-tight transition-all duration-300 group-hover:text-gradient",
-                  "highlight" in project && project.highlight ? "text-xl sm:text-2xl" : "text-lg sm:text-xl",
-                )}
-              >
-                {project.title}
-              </h3>
-
-              <p
-                className={cn(
-                  "mb-5 text-sm leading-relaxed text-muted-foreground",
-                  "highlight" in project && project.highlight ? "line-clamp-3" : "line-clamp-2",
-                )}
-              >
-                {project.description}
-              </p>
-
-              <div className="mb-5 flex items-center gap-5 font-mono text-xs text-muted-foreground">
-                <span className="flex items-center gap-1.5 transition-colors group-hover:text-yellow-500">
-                  <Star className="h-3.5 w-3.5" />
-                  {project.stars}
-                </span>
-                <span className="flex items-center gap-1.5 transition-colors group-hover:text-foreground">
-                  <GitFork className="h-3.5 w-3.5" />
-                  {project.forks}
-                </span>
-              </div>
-
-              <div className="mb-5 flex flex-wrap gap-2">
-                {project.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="rounded-md border border-border/80 bg-secondary/60 px-2.5 py-1 font-mono text-xs text-secondary-foreground transition-colors hover:border-primary/50 hover:bg-primary/10"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-
-              <div className="flex items-center gap-4">
-                <a
-                  href={project.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 font-mono text-xs text-muted-foreground hover:text-primary transition-all duration-300 group/link"
-                >
-                  <Github className="h-4 w-4 transition-transform group-hover/link:scale-110" />
-                  <span className="underline-animate">source</span>
-                </a>
-                {project.homepage && (
-                  <a
-                    href={project.homepage}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 font-mono text-xs text-primary hover:text-foreground transition-all duration-300 group/link"
-                  >
-                    <ExternalLink className="h-4 w-4 transition-transform group-hover/link:scale-110 group-hover/link:rotate-12" />
-                    <span className="underline-animate">live</span>
-                  </a>
-                )}
-              </div>
-
-              <div className="absolute bottom-0 left-0 h-1 w-0 bg-gradient-to-r from-primary via-primary/80 to-transparent transition-all duration-500 group-hover:w-full" />
+              {/* Subtle Linear Scanline */}
+              <div className="absolute bottom-0 left-0 h-[1px] w-0 bg-primary/40 transition-all duration-1000 group-hover:w-full" />
             </article>
           ))}
         </div>

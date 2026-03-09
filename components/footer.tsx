@@ -1,4 +1,4 @@
-import { Github, Twitter, Linkedin, Mail, ExternalLink, Heart } from "lucide-react"
+import { Github, Twitter, Linkedin, Mail, ExternalLink, Heart, Terminal, Cpu } from "lucide-react"
 import Link from "next/link"
 
 const socialLinks = [
@@ -83,34 +83,23 @@ export function Footer() {
                     <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-6 gap-8 md:gap-12">
                         
                         <div className="lg:col-span-3 space-y-6">
-                           <Link href="/" className="group flex items-center gap-0">
-                    
-                            {/* Icon */}
-                            <div className="relative flex h-9 w-9 items-center justify-center rounded-lg   transition-all duration-400 group-hover:scale-105 group-hover:shadow-lg ">
-                              
-                              {/* Mafia M Logo */}
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth="1.8"
-                                className="h-7 w-7 text-primary group-hover:text-white transition-colors duration-300"
-                              >
-                                <circle cx="12" cy="12" r="6" />
-                                <line x1="12" y1="2" x2="12" y2="22" />
-                              </svg>
-
+                           {/* Logo Section */}
+                          <Link href="/" className="group relative flex items-center gap-3">
+                            <div className="relative flex h-10 w-10 items-center justify-center rounded-sm border border-primary/30 bg-primary/5 transition-all duration-500 group-hover:border-primary group-hover:bg-primary/10 group-hover:rotate-90">
+                              <Cpu className="h-5 w-5 text-primary transition-transform duration-500 group-hover:-rotate-90" />
+                              {/* Glitch Corners */}
+                              <span className="absolute -top-1 -left-1 h-2 w-2 border-t border-l border-primary opacity-0 group-hover:opacity-100 transition-opacity" />
+                              <span className="absolute -bottom-1 -right-1 h-2 w-2 border-b border-r border-primary opacity-0 group-hover:opacity-100 transition-opacity" />
                             </div>
 
-                            {/* Text */}
-                            <span className="font-mono text-sm tracking-tight flex items-center gap-1">
-                              Mафия
-                              <span className="bg-linear-to-l from-primary/50 to-accent bg-clip-text text-transparent font-semibold ml-1">
-                                CODE
+                            <div className="flex flex-col">
+                              <span className="font-mono text-sm font-bold tracking-tighter text-foreground">
+                                Mафия<span className="text-primary animate-pulse">_</span>
                               </span>
-                            </span>
-
+                              <span className="text-[10px] font-mono leading-none text-muted-foreground uppercase tracking-[0.2em] group-hover:text-primary transition-colors">
+                                Laboratory
+                              </span>
+                            </div>
                           </Link>
                             <p className="text-sm/6 text-neutral-300 max-w-96">I'm a full-stack developer with a passion for crafting exceptional digital experiences.</p>
                             <div className="flex gap-5 md:gap-6 order-1 md:order-2">
