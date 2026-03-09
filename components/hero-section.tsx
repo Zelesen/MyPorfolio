@@ -70,11 +70,13 @@ export function HeroSection() {
                 </span>
               </div>
               
-              <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold tracking-tighter leading-[1.1]">
-                Forging <br />
-                <span className="relative inline-block text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-primary animate-gradient-x min-h-[1.2em]">
+              <h1 className="text-4xl font-bold tracking-tight sm:text-4xl lg:text-5xl xl:text-6xl text-balance">
+                Forging digital
+                <br />
+                <span
+                  className="bg-linear-to-l from-primary/50 to-accent text-transparent bg-clip-text typing-cursor"
+                >
                   {displayText}
-                  <span className="absolute -right-2 md:-right-4 top-0 h-full w-[2px] md:w-[4px] bg-primary animate-pulse" />
                 </span>
               </h1>
             </div>
