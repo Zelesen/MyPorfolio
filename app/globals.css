@@ -506,3 +506,53 @@
   background: oklch(from var(--primary) l c h / 0.3);
   color: var(--foreground);
 }
+
+
+@keyframes scanline {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes terminal-glow {
+
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.glass-panel {
+  background: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 32px 0 rgba(0, 0, 0, 0.8);
+}
+
+
+@keyframes gradient-x {
+0%,100%{background-position:left center;background-size:200% 200%}
+50%{background-position:right center;background-size:200% 200%}
+}
+
+.animate-gradient-x{
+animation:gradient-x 4s ease infinite;
+}
+
+@keyframes float{
+0%{transform:translateY(0px)}
+50%{transform:translateY(-10px)}
+100%{transform:translateY(0px)}
+}
+
+.animate-float{
+animation:float 6s ease-in-out infinite;
+}
