@@ -1,8 +1,8 @@
-# EinCode Architecture Documentation
+# Mafia Code Architecture Documentation
 
 ## Overview
 
-EinCode is a Next.js 16 + React 19 personal portfolio and digital laboratory built with modern web technologies. It demonstrates Next.js App Router patterns, Tailwind CSS v4 styling, and a component-driven architecture.
+Mafia Code is a Next.js 16 + React 19 personal portfolio and digital laboratory built with modern web technologies. It demonstrates Next.js App Router patterns, Tailwind CSS v4 styling, and a component-driven architecture.
 
 ## Technology Stack
 
@@ -18,7 +18,7 @@ EinCode is a Next.js 16 + React 19 personal portfolio and digital laboratory bui
 ## Project Structure
 
 \`\`\`
-eincode/
+code/
 ├── app/                          # Next.js App Router (server-first)
 │   ├── layout.tsx                # Root layout with fonts, metadata, ThemeProvider
 │   ├── page.tsx                  # Homepage

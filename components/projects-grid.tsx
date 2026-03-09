@@ -7,7 +7,7 @@ import { Star, GitFork, Sparkles, Terminal, Code2, ExternalLink } from "lucide-r
 const projects = [
   {
     id: 0,
-    title: "Mафия Ad Intelligence",
+    title: "Ad Intelligence",
     description:
       "An AI-powered platform that analyzes ad creatives, messaging, and targeting patterns to help marketers discover high-performing advertising strategies.",
     tags: ["TypeScript", "Next.js", "OpenAI", "Analytics", "Tailwind"],
@@ -22,7 +22,7 @@ const projects = [
   },
   {
     id: 1,
-    title: "Mафия Copy Analyzer",
+    title: "Copy Analyzer",
     description:
       "An AI tool that evaluates advertising copy and marketing content for clarity, persuasion, and emotional impact using large language models.",
     tags: ["TypeScript", "Next.js", "GPT", "AI Analysis"],
@@ -36,7 +36,7 @@ const projects = [
   },
   {
     id: 2,
-    title: "Mафия Ad Library",
+    title: "Ad Library",
     description:
       "A searchable ad intelligence platform inspired by the Facebook Ad Library that collects, categorizes, and analyzes advertising creatives.",
     tags: ["JavaScript", "Django", "Scraping", "Marketing"],
@@ -49,7 +49,7 @@ const projects = [
   },
   {
     id: 3,
-    title: "Mафия Brand Monitor",
+    title: "Brand Monitor",
     description:
       "A dashboard that tracks brand citations, prompt categories, and AI-generated insights to measure how brands appear across AI platforms.",
     tags: ["Next.js", "PostgreSQL", "OpenAI", "Analytics"],
@@ -63,7 +63,7 @@ const projects = [
   },
   {
     id: 4,
-    title: "Mафия Video Analyzer",
+    title: "Video Analyzer",
     description:
       "An AI system that extracts frames from video ads and analyzes visuals, branding, and messaging for creative performance insights.",
     tags: ["Python", "OpenCV", "AI", "Video Analysis"],
@@ -102,7 +102,7 @@ const projects = [
   },
   {
     id: 7,
-    title: "Mафия Dev Stack",
+    title: "Dev Stack",
     description:
       "A developer starter kit with Next.js, Docker, PostgreSQL, and Tailwind designed for quickly launching scalable SaaS applications.",
     tags: ["TypeScript", "Next.js", "Docker", "PostgreSQL"],
